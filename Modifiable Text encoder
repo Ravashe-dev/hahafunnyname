@@ -1,0 +1,140 @@
+
+var alphabet = "abcdefghijklmnopqrstuvwxyz ";
+//this is what is getting encoded for each letter the first one is a second one is b so on so forth
+var alphabetReplace = [
+	"tuKvWuOMMJaaHpdDeDDMCReMtkZVnIOv",
+	"viXzeOObhxLTDcmcvHbmImutqobegeFK",
+    "fEKDiUGpgkhFHbayvLHCPpxQAEQSdUbe",
+    "eAMIcJNzNmtTgnrZBwkHlOZRWSMNJJMp",
+    "divpiSMlILQFggkaROUBbtbyaNyaiNZE",
+    "kaZpnBuFGfjUPqplVZyzKPrCNfQfKZkf",
+    "cvTrtfiEcijeHDRplVkBlIPyqdSVWkPH",
+    "VqkYeSibtTAlyfnCrnNpihMNOYikRGGP",
+    "kddtCVnSCitYVXerpXFhQKnnzvSlChwB",
+    "oMlkZtYOogJxoHTJqOKSzyzqePrUIGVM",
+    "eERqmAYPWFbEDDpSTSAVdaWUqfxuJPHt",
+    "VNRtnUQTblaJiXtuJpNvBPMFioxzMxBa",
+    "LfExJJfdliKBZpgXluYgUWINWjxcIpuS",
+    "KfsEGRUMBbMnIDhKDOIDoXVbkvuAVjnn",
+    "thXfAyQLSYDrSuMBeZcMmvYrgrWPfybq",
+    "tpVrQUQyzwLRqcJkERZdFGiVJKYNEoeu",
+    "WRhxXkrsNktjqlonmQsdtTlksBLQfoqb",
+    "nMNevTxBWidtumgumCvTqaIizeRlpMLU",
+    "NCpNtvHymHoKPhPkxoEMGQypZHwmVjMe",
+    "pXQryTdUrhstWdlrdvbEXEOlUeYKUthd",
+    "nKcnBSCzhHzLQkTimumELueabVPoMujx",
+    "IZWAvExybUkTRiAQbgqkeaOstzMDbJUr",
+    "rZQYWknknpzZKnjddNeClaRqofupeEPF",
+    "kFvWzcHhYKQdHYObSFzaiXflfHncuiOj",
+    "hOktzDyxEjpPApZuvrpPWZYQqWnAkQTa",
+    "nhYyvugLSoSgHKObixspwXBGCsWjzoKS",
+    " "
+    
+];
+//in this variable this is the sentece you are going to encode |
+//     |
+//   (   )
+//    ( )
+// you can put spaces but undefined come out for ASCII/binary because im bad at coding(*kek* normies)
+var str = "i like cats"
+	
+function encryptLetter(letter){
+	for(var i = 0; i < 26; i++){
+    	if(letter == alphabet[i]){
+        	return alphabetReplace[i];
+        }
+    }
+    
+}
+
+function encryptKobori(string){
+	let output = "";
+  string = string.toLowerCase();
+    for(var i = 0; i < string.length; i++){
+    	output += encryptLetter(string[i]);
+    }
+    return output;
+}
+
+console.log(encryptKobori(str));
+
+function decryptKobori(string){
+  let output = "";
+  for(var i = 0; i < string.length; i++){
+    output += decryptLetter(string[i]);
+  }
+  return output;
+}
+
+function decryptLetter(letter){
+	for(var i = 0; i < 26; i++){
+    
+    	if(letter == alphabetReplace[i]){
+        	return alphabet[i];
+        }
+    }
+    
+}
+console.log("________________Binary");
+var alphabet = "abcdefghijklmnopqrstuvwxyz ";
+var alphabetReplace = [
+	"01100001",
+	"01100010",
+    "01100011",
+    "01100100",
+    "01100101",
+    "01100110",
+    "01100111",
+    "01101000",
+    "01101001",
+    "01101010",
+    "01101011",
+    "01101100",
+    "01101101",
+    "01101110",
+    "01101111",
+    "01110000",
+    "01110001",
+    "01110010",
+    "01110011",
+    "01110100",
+    "01110101",
+    "01110110",
+    "01110111",
+    "01111000",
+    "01111001",
+    "01111010",
+    " "
+    
+];
+
+	
+function encryptLetter(letter){
+	for(var i = 0; i < 26; i++){
+    	if(letter == alphabet[i]){
+        	return alphabetReplace[i];
+        }
+    }
+    
+}
+
+function encryptKobori(string){
+	let output = "";
+  string = string.toLowerCase();
+    for(var i = 0; i < string.length; i++){
+    	output += encryptLetter(string[i]);
+    }
+    return output;
+}
+
+console.log(encryptKobori(str));
+
+function decryptKobori(string){
+  let output = "";
+  for(var i = 0; i < string.length; i++){
+    output += decryptLetter(string[i]);
+  }
+  return output;
+}
+
+
